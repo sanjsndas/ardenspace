@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Arden Space Concepts</title>
+  <meta name="description" content="Get in touch with Arden Space Concepts — editorial inquiries, pitches, and general correspondence. We read every message.">
+  <meta name="author" content="Arden Space Concepts">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Arden Space Concepts">
+  <meta property="og:description" content="Reach the editorial team for inquiries, pitches, or general correspondence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ardenspaceconcepts.com/contact.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+  
+  <link rel="canonical" href="https://ardenspaceconcepts.com/contact.html">
+  
+  <!-- Schema.org ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Arden Space Concepts",
+    "description": "Contact the editorial team at Arden Space Concepts.",
+    "url": "https://ardenspaceconcepts.com/contact.html"
+  }
+  </script>
+  
+  <style>
+    /* ===== RESET & BASE (consistent with main site) ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #7a7a7a;
+      --paper: #faf9f7;
+      --paper-warm: #f5f3ef;
+      --border: #e2ded8;
+      --border-dark: #c8c2ba;
+      --accent: #8b6f47;
+      --accent-light: #b89b73;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+    }
+    
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.05rem; }
+    
+    /* ===== HEADER (same as index) ===== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    
+    .logo span { color: var(--accent); }
+    
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      transition: color 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active { color: var(--ink); }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.6rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    
+    /* ===== MAIN CONTENT ===== */
+    .contact-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    
+    .contact-header {
+      max-width: 720px;
+      margin-bottom: 2.5rem;
+    }
+    
+    .contact-header h1 {
+      margin-bottom: 0.75rem;
+    }
+    
+    .contact-header p {
+      font-size: 1.1rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+    }
+    
+    .contact-grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    
+    /* ===== FORM ===== */
+    .contact-form {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      margin-bottom: 0.4rem;
+      font-weight: 500;
+    }
+    
+    .form-group label .required {
+      color: var(--accent);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: var(--ink);
+      transition: border-color 0.2s;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: white;
+    }
+    
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .form-group select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237a7a7a' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+    }
+    
+    .form-submit {
+      width: 100%;
+      padding: 0.9rem 1.5rem;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-family: var(--sans);
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    
+    .form-submit:hover {
+      background: var(--accent);
+    }
+    
+    .form-message {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      padding: 0.75rem;
+      display: none;
+    }
+    
+    .form-message.success {
+      display: block;
+      background: #eef4ea;
+      color: #3a6b2f;
+      border: 1px solid #cfe2c4;
+    }
+    
+    .form-message.error {
+      display: block;
+      background: #f9edea;
+      color: #a13d2b;
+      border: 1px solid #f0cfc7;
+    }
+    
+    /* ===== CONTACT DETAILS (right column) ===== */
+    .contact-details {
+      padding-top: 0.5rem;
+    }
+    
+    .contact-details h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .contact-item {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+    
+    .contact-item strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--ink-muted);
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    
+    .contact-item span {
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    
+    .contact-item a {
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    
+    .contact-item a:hover {
+      border-bottom-color: var(--accent);
+    }
+    
+    .contact-note {
+      margin-top: 2rem;
+      padding: 1.25rem;
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+    }
+    
+    .contact-note strong {
+      color: var(--ink);
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .contact-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      html { font-size: 15px; }
+      
+      h1 { font-size: 1.8rem; }
+      
+      .header-inner { flex-wrap: wrap; }
+      
+      .nav-toggle { display: block; }
+      
+      .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+      
+      .main-nav.open { display: flex; }
+      
+      .contact-form {
+        padding: 1.5rem;
+      }
+      
+      .contact-container {
+        padding: 2rem 1.5rem 3rem;
+      }
+    }
+    
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Arden <span>Space</span> Concepts</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav aria-label="Main navigation">
+        <ul class="main-nav" id="mainNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT CONTENT ===== -->
+  <main class="contact-container">
+    
+    <div class="contact-header">
+      <h1>Contact</h1>
+      <p>We welcome correspondence from readers, contributors, and publishers. Whether you have a question, a pitch, or simply want to share a thought about an article, we read every message. Please use the form below or reach us directly via email.</p>
+    </div>
+
+    <div class="contact-grid-layout">
+      
+      <!-- ===== LEFT: FORM ===== -->
+      <div>
+        <form class="contact-form" id="contactForm" onsubmit="return handleContact(event)">
+          <div class="form-group">
+            <label for="contactName">Your Name <span class="required">*</span></label>
+            <input type="text" id="contactName" name="name" required placeholder="e.g. Jane Bennett">
+          </div>
+          
+          <div class="form-group">
+            <label for="contactEmail">Email Address <span class="required">*</span></label>
+            <input type="email" id="contactEmail" name="email" required placeholder="you@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject" name="subject">
+              <option value="">Select a topic…</option>
+              <option value="editorial">Editorial Inquiry</option>
+              <option value="pitch">Pitch & Submissions</option>
+              <option value="general">General Correspondence</option>
+              <option value="press">Press / Media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="contactMessage">Message <span class="required">*</span></label>
+            <textarea id="contactMessage" name="message" required placeholder="Write your message here…"></textarea>
+          </div>
+          
+          <button type="submit" class="form-submit">Send Message</button>
+          
+          <div class="form-message" id="formMessage"></div>
+        </form>
+      </div>
+      
+      <!-- ===== RIGHT: DETAILS ===== -->
+      <div class="contact-details">
+        <h2>Direct Correspondence</h2>
+        
+        <div class="contact-item">
+          <strong>Editorial Inquiries</strong>
+          <span><a href="mailto:editorial@ardenspaceconcepts.com">editorial@ardenspaceconcepts.com</a></span>
+        </div>
+        
+        <div class="contact-item">
+          <strong>Pitch & Submissions</strong>
+          <span><a href="mailto:pitch@ardenspaceconcepts.com">pitch@ardenspaceconcepts.com</a></span>
+        </div>
+        
+        <div class="contact-item">
+          <strong>General Correspondence</strong>
+          <span><a href="mailto:hello@ardenspaceconcepts.com">hello@ardenspaceconcepts.com</a></span>
+        </div>
+        
+        <div class="contact-item">
+          <strong>Mailing Address</strong>
+          <span>Arden Space Concepts<br>PO Box 4402<br>Portland, OR 97208</span>
+        </div>
+        
+        <div class="contact-note">
+          <strong>Response time:</strong> We aim to reply within 3–5 business days. For urgent press inquiries, please mark your subject line as "Urgent." We appreciate your patience — every message is read by a member of our editorial team.
+        </div>
+      </div>
+      
+    </div>
+    
+  </main>
+
+  <!-- ===== FOOTER (consistent with main site) ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Arden <span>Space</span> Concepts</span>
+          <p>An independent editorial publication about architecture and interior design. Long-form writing for people who care about how spaces work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="index.html#architecture">Architecture</a></li>
+            <li><a href="index.html#interiors">Interior Design</a></li>
+            <li><a href="index.html#materials">Materials</a></li>
+            <li><a href="index.html#lighting">Lighting</a></li>
+            <li><a href="index.html#planning">Space Planning</a></li>
+            <li><a href="index.html#modern-homes">Modern Homes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Publication</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#newsletter">Newsletter</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Arden Space Concepts. All rights reserved.</p>
+        <p>Independently published. No sponsored content.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== NAV TOGGLE =====
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    
+    // ===== CONTACT FORM HANDLER =====
+    function handleContact(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value.trim();
+      const formMsg = document.getElementById('formMessage');
+      
+      // Reset message
+      formMsg.className = 'form-message';
+      formMsg.textContent = '';
+      
+      // Basic validation (HTML required handles most, but double-check)
+      if (!name || !email || !message) {
+        formMsg.classList.add('error');
+        formMsg.textContent = 'Please fill in all required fields (Name, Email, Message).';
+        return false;
+      }
+      
+      if (!email.includes('@') || !email.includes('.')) {
+        formMsg.classList.add('error');
+        formMsg.textContent = 'Please enter a valid email address.';
+        return false;
+      }
+      
+      // Simulate successful submission (no backend in this demo)
+      // In a real deployment, this would POST to a server endpoint.
+      formMsg.classList.add('success');
+      formMsg.textContent = 'Thank you, ' + name + '. Your message has been sent. We will respond within 3–5 business days.';
+      
+      // Clear form
+      document.getElementById('contactForm').reset();
+      
+      // Optionally, scroll message into view
+      formMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      
+      return false;
+    }
+    
+    // ===== ACTIVE NAV HIGHLIGHT =====
+    // Already set via class="active" on contact.html link
+    // But we also want to make sure smooth scrolling works for any in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          mainNav.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Arden Space Concepts — Architecture & Interior Design Publication</title>
+  <meta name="description" content="About Arden Space Concepts: an independent editorial publication devoted to serious writing on architecture, interiors, materials, and the principles that shape meaningful spaces.">
+  <meta name="author" content="Arden Space Concepts">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="About | Arden Space Concepts">
+  <meta property="og:description" content="Independent editorial publication exploring residential architecture, interior design, materials, and spatial principles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ardenspaceconcepts.com/about.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+  
+  <link rel="canonical" href="https://ardenspaceconcepts.com/about.html">
+  
+  <!-- Schema.org AboutPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Arden Space Concepts",
+    "description": "Independent editorial publication covering architecture and interior design.",
+    "url": "https://ardenspaceconcepts.com/about.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Arden Space Concepts"
+    }
+  }
+  </script>
+  
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #7a7a7a;
+      --paper: #faf9f7;
+      --paper-warm: #f5f3ef;
+      --border: #e2ded8;
+      --border-dark: #c8c2ba;
+      --accent: #8b6f47;
+      --accent-light: #b89b73;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+    }
+    
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.05rem; }
+    
+    .article-body h2 { margin: 2.5rem 0 1rem; }
+    .article-body h3 { margin: 2rem 0 0.75rem; }
+    .article-body p { margin-bottom: 1.25rem; font-size: 1.0625rem; line-height: 1.75; color: var(--ink-light); }
+    .article-body p:first-of-type { font-size: 1.15rem; color: var(--ink); }
+    
+    /* ===== HEADER ===== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    
+    .logo span { color: var(--accent); }
+    
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      transition: color 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active { color: var(--ink); }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.6rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    
+    /* ===== SEARCH BAR ===== */
+    .search-bar {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 1rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+    
+    .search-input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border);
+      background: white;
+      font-size: 0.9rem;
+      font-family: var(--sans);
+      color: var(--ink);
+      transition: border-color 0.2s;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    
+    .search-input::placeholder { color: var(--ink-muted); }
+    
+    /* ===== CATEGORY FILTER ===== */
+    .category-filter {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      overflow-x: auto;
+    }
+    
+    .cat-btn {
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--sans);
+      white-space: nowrap;
+    }
+    
+    .cat-btn:hover, .cat-btn.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(139, 111, 71, 0.05);
+    }
+    
+    /* ===== MAIN LAYOUT ===== */
+    .layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3.5rem;
+    }
+    
+    /* ===== ABOUT HERO ===== */
+    .about-hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .about-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    
+    .about-hero .subhead {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--ink-muted);
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .about-hero .dek {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--ink-light);
+    }
+    
+    /* ===== ARTICLE READING SECTIONS ===== */
+    .static-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    
+    .static-section h2 {
+      margin-bottom: 1rem;
+    }
+    
+    .static-section h3 {
+      margin: 2rem 0 0.75rem;
+      font-size: 1.3rem;
+    }
+    
+    .static-section p {
+      max-width: 720px;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+    
+    .static-section p:first-of-type {
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+    
+    /* ===== TEAM GRID ===== */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 720px;
+    }
+    
+    .team-member {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.5rem;
+    }
+    
+    .team-member .name {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      margin-bottom: 0.25rem;
+      color: var(--ink);
+    }
+    
+    .team-member .role {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .team-member .bio {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--ink-light);
+    }
+    
+    /* ===== VALUES LIST ===== */
+    .values-list {
+      list-style: none;
+      max-width: 720px;
+      margin-top: 1.5rem;
+    }
+    
+    .values-list li {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    
+    .values-list li:first-child { border-top: 1px solid var(--border); }
+    
+    .values-list .num {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--accent-light);
+      line-height: 1;
+      min-width: 2rem;
+    }
+    
+    .values-list .val-content h4 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.35rem;
+      color: var(--ink);
+    }
+    
+    .values-list .val-content p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--ink-light);
+      margin: 0;
+    }
+    
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+    
+    .sidebar-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .sidebar-section:last-child { border-bottom: none; }
+    
+    .sidebar-section h4 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 1.25rem;
+    }
+    
+    .popular-list { list-style: none; }
+    
+    .popular-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .popular-list li:last-child { border-bottom: none; }
+    
+    .popular-list .pop-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      line-height: 1.35;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    .popular-list .pop-meta {
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    
+    .about-box {
+      background: var(--paper-warm);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+    
+    .about-box p {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+    }
+    
+    /* ===== NEWSLETTER ===== */
+    .newsletter-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .newsletter-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .newsletter-inner h3 { margin-bottom: 0.5rem; }
+    
+    .newsletter-inner p {
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border-dark);
+      font-size: 0.9rem;
+      font-family: var(--sans);
+    }
+    
+    .newsletter-form button {
+      padding: 0.7rem 1.25rem;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.2s;
+    }
+    
+    .newsletter-form button:hover { background: var(--accent); }
+    
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--ink);
+      color: var(--paper);
+      margin-top: 2rem;
+    }
+    
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .footer-brand .logo { color: white; margin-bottom: 0.75rem; display: block; }
+    
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    
+    .footer-col ul { list-style: none; }
+    
+    .footer-col li { margin-bottom: 0.5rem; }
+    
+    .footer-col a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    
+    .footer-col a:hover { color: white; }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+    
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    .hidden { display: none !important; }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      
+      .sidebar { position: static; }
+      
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      
+      .team-grid { grid-template-columns: 1fr; }
+    }
+    
+    @media (max-width: 640px) {
+      html { font-size: 15px; }
+      
+      h1 { font-size: 1.8rem; }
+      .about-hero h1 { font-size: 2rem; }
+      h2 { font-size: 1.4rem; }
+      
+      .header-inner { flex-wrap: wrap; }
+      
+      .nav-toggle { display: block; }
+      
+      .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+      
+      .main-nav.open { display: flex; }
+      
+      .newsletter-form { flex-direction: column; }
+      
+      .contact-grid { grid-template-columns: 1fr; }
+      
+      .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      
+      .values-list li { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Arden <span>Space</span> Concepts</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav aria-label="Main navigation">
+        <ul class="main-nav" id="mainNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== SEARCH ===== -->
+  <div class="search-bar">
+    <label for="searchInput" class="sr-only">Search articles</label>
+    <input type="text" id="searchInput" class="search-input" placeholder="Search articles by title, topic, or keyword…">
+  </div>
+
+  <!-- ===== CATEGORY FILTER ===== -->
+  <div class="category-filter" id="categoryFilter">
+    <button class="cat-btn active" data-category="all">All</button>
+    <button class="cat-btn" data-category="Architecture">Architecture</button>
+    <button class="cat-btn" data-category="Interior Design">Interior Design</button>
+    <button class="cat-btn" data-category="Home Design">Home Design</button>
+    <button class="cat-btn" data-category="Materials">Materials</button>
+    <button class="cat-btn" data-category="Space Planning">Space Planning</button>
+    <button class="cat-btn" data-category="Lighting">Lighting</button>
+    <button class="cat-btn" data-category="Furniture">Furniture</button>
+    <button class="cat-btn" data-category="Modern Homes">Modern Homes</button>
+  </div>
+
+  <!-- ===== ABOUT HERO ===== -->
+  <section class="about-hero">
+    <h1>About Arden Space Concepts</h1>
+    <p class="subhead">An independent editorial publication devoted to the serious consideration of architecture and interior design.</p>
+    <p class="dek">
+      We publish long-form articles that examine the principles, materials, and decisions that shape the built environment. No sponsored content. No listicles. Just considered writing for people who care about how spaces work.
+    </p>
+  </section>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <main class="layout" id="mainContent">
+
+    <!-- LEFT COLUMN: ABOUT CONTENT -->
+    <div class="content-column">
+
+      <!-- ORIGIN STORY -->
+      <div class="article-body">
+        <h2>Our Origins</h2>
+        <p>
+          Arden Space Concepts began as a personal archive of architectural notes—observations collected over years of visiting buildings, reading plans, and speaking with the people who make spaces. What started as a private discipline slowly became a public one.
+        </p>
+        <p>
+          We launched as a publication in 2024 with a simple conviction: that serious writing about buildings and interiors has value. Not product reviews. Not trend reports. Not aspirational photography with thin captions. What we wanted—and what we continue to publish—is writing that takes architecture and design seriously as disciplines, with their own histories, logics, and standards of excellence.
+        </p>
+        <p>
+          The name "Arden" comes from the forest in Shakespeare's <em>As You Like It</em>—a place of clarity, reflection, and the occasional unexpected encounter. "Space Concepts" is deliberately plain. We are interested in how spaces are conceived, made, and inhabited. The concepts matter more than the branding.
+        </p>
+      </div>
+
+      <!-- EDITORIAL PHILOSOPHY -->
+      <div class="article-body" style="margin-top: 2.5rem;">
+        <h2>Editorial Philosophy</h2>
+        <p>
+          We believe that architecture and interior design are disciplines—not merely aesthetic preferences. A building is not a picture. A room is not a mood board. Both are physical environments that shape how people live, work, rest, and relate to one another. Writing about them requires attention to proportion, material behavior, spatial logic, and the accumulated wisdom of practitioners.
+        </p>
+        <p>
+          Our articles are written to be useful for years rather than weeks. We do not chase trends, and we do not publish content because it might perform well in search engines. We publish articles because we believe the subject deserves careful treatment and because we have something substantive to say about it.
+        </p>
+        <p>
+          Every article is researched, fact-checked, and edited by our team. Where we make claims about materials, methods, or historical precedents, we cite our sources or draw on direct professional experience. Where we offer opinions—and we do—we identify them as such.
+        </p>
+      </div>
+
+      <!-- TEAM -->
+      <div class="article-body" style="margin-top: 2.5rem;">
+        <h2>Editorial Team</h2>
+        <p>
+          Our team includes architects, interior designers, and experienced design journalists. We commission articles from practitioners who can write with authority about their areas of expertise, and we work closely with contributors to ensure clarity, accuracy, and depth.
+        </p>
+        
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="name">Margaret Ellsworth</div>
+            <span class="role">Editor</span>
+            <p class="bio">
+              Margaret spent fifteen years as an editor at <em>Architectural Review</em> and <em>Dwell</em>, where she commissioned and edited long-form features on residential architecture, material culture, and urbanism. She holds a degree in architectural history from the University of Edinburgh and has written for publications including <em>The Architectural Review</em>, <em>Domus</em>, and <em>Arquitectura Viva</em>.
+            </p>
+          </div>
+          <div class="team-member">
+            <div class="name">Daniel Okafor</div>
+            <span class="role">Contributing Editor</span>
+            <p class="bio">
+              Daniel is an architect and writer based in London. He trained at the Architectural Association and has practiced with firms in London and Lagos. His writing focuses on the intersection of architecture, climate, and material innovation, and his work has appeared in <em>The Architect's Journal</em> and <em>RIBA Journal</em>.
+            </p>
+          </div>
+          <div class="team-member">
+            <div class="name">Clara Lindqvist</div>
+            <span class="role">Contributing Editor, Scandinavia</span>
+            <p class="bio">
+              Clara is an interior designer and journalist based in Stockholm. She writes about residential interiors, lighting design, and the Nordic material tradition. Her work has appeared in <em>Scandinavian Living</em> and <em>Wallpaper*</em>, and she consults on residential projects throughout Sweden and Denmark.
+            </p>
+          </div>
+          <div class="team-member">
+            <div class="name">James Whitfield</div>
+            <span class="role">Contributing Editor, Americas</span>
+            <p class="bio">
+              James is a writer and former contractor based in Portland, Oregon. He writes about construction methods, building science, and the practical realities of residential renovation. His articles draw on two decades of experience in the field and a longstanding interest in how buildings are actually made.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- VALUES -->
+      <div class="article-body" style="margin-top: 2.5rem;">
+        <h2>What We Stand For</h2>
+        <p>
+          Our editorial values are straightforward, and we hold ourselves to them in every article we publish.
+        </p>
+        
+        <ul class="values-list">
+          <li>
+            <span class="num">01</span>
+            <div class="val-content">
+              <h4>Independence</h4>
+              <p>We accept no sponsored content, native advertising, or paid placements. Our editorial decisions are made without commercial influence. We have no financial relationships with manufacturers, developers, or design firms.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <div class="val-content">
+              <h4>Depth</h4>
+              <p>We publish long-form articles because complex subjects require space. We would rather publish one carefully considered piece than five superficial ones. Our articles are written to be read, not skimmed.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <div class="val-content">
+              <h4>Accuracy</h4>
+              <p>We fact-check our articles and cite our sources. Where we are uncertain, we say so. Where we are offering opinion, we identify it. Our readers deserve to know the difference between reporting and commentary.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <div class="val-content">
+              <h4>Usefulness</h4>
+              <p>We write for people who design, build, renovate, or simply care about spaces. Our articles aim to be practical as well as thoughtful—useful to professionals and accessible to engaged general readers.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <div class="val-content">
+              <h4>Humility</h4>
+              <p>Architecture and design are vast fields, and no publication can cover everything. We are honest about what we know and what we do not. We are always learning, and we welcome correction.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- WHAT WE DON'T DO -->
+      <div class="article-body" style="margin-top: 2.5rem;">
+        <h2>What We Don't Do</h2>
+        <p>
+          Just as important as what we publish is what we choose not to publish.
+        </p>
+        <p>
+          We do not publish sponsored articles, advertorials, or "partner content." We do not accept payment for coverage. We do not run display advertising. We do not use affiliate links.
+        </p>
+        <p>
+          We do not publish listicles, "top ten" roundups, or clickbait. We do not chase viral trends or optimize our headlines for social media algorithms. We do not publish articles simply because a topic is popular.
+        </p>
+        <p>
+          We do not claim to be the final word on any subject. We are one publication among many, and we are grateful for the work of other writers, critics, and publications who take architecture and design seriously.
+        </p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="article-body" style="margin-top: 2.5rem;">
+        <h2>Get in Touch</h2>
+        <p>
+          We welcome correspondence from readers, contributors, and publishers. We read every message, though we cannot always respond individually.
+        </p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem; max-width: 720px;">
+          <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+            <strong style="display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: 0.25rem;">Editorial Inquiries</strong>
+            <span style="font-size: 0.95rem; color: var(--ink);">editorial@ardenspaceconcepts.com</span>
+          </div>
+          <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+            <strong style="display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: 0.25rem;">Pitch & Submissions</strong>
+            <span style="font-size: 0.95rem; color: var(--ink);">pitch@ardenspaceconcepts.com</span>
+          </div>
+          <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+            <strong style="display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: 0.25rem;">General Correspondence</strong>
+            <span style="font-size: 0.95rem; color: var(--ink);">hello@ardenspaceconcepts.com</span>
+          </div>
+          <div style="border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+            <strong style="display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); margin-bottom: 0.25rem;">Mailing Address</strong>
+            <span style="font-size: 0.95rem; color: var(--ink);">Arden Space Concepts<br>PO Box 4402<br>Portland, OR 97208</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: SIDEBAR -->
+    <aside class="sidebar" aria-label="Sidebar">
+
+      <div class="sidebar-section">
+        <h4>Popular Articles</h4>
+        <ul class="popular-list">
+          <li>
+            <a href="index.html#planning" class="pop-title">The Geometry of Living: How Floor Plans Shape Daily Experience</a>
+            <span class="pop-meta">Space Planning · 15 min</span>
+          </li>
+          <li>
+            <a href="index.html#materials" class="pop-title">The Honest Surface: A Guide to Natural Stone</a>
+            <span class="pop-meta">Materials · 13 min</span>
+          </li>
+          <li>
+            <a href="index.html#architecture" class="pop-title">The Quiet Power of Restraint in Residential Architecture</a>
+            <span class="pop-meta">Architecture · 14 min</span>
+          </li>
+          <li>
+            <a href="index.html#lighting" class="pop-title">Layered Light: A Room-by-Room Approach to Illumination</a>
+            <span class="pop-meta">Lighting · 12 min</span>
+          </li>
+          <li>
+            <a href="index.html#modern-homes" class="pop-title">The Courtyard House: Ancient Strategy, Contemporary Relevance</a>
+            <span class="pop-meta">Modern Homes · 14 min</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>Publication Details</h4>
+        <div class="about-box">
+          <p>
+            <strong>Founded:</strong> 2024<br>
+            <strong>Format:</strong> Independent editorial publication<br>
+            <strong>Frequency:</strong> 2–3 long-form articles per week<br>
+            <strong>Coverage:</strong> Residential architecture, interior design, materials, lighting, space planning, and related disciplines.<br>
+            <strong>Business model:</strong> Reader-supported. No advertising, no sponsored content.
+          </p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>Editorial Team</h4>
+        <div style="font-size: 0.88rem; color: var(--ink-light); line-height: 1.7;">
+          <p><strong style="color: var(--ink);">Editor</strong><br>Margaret Ellsworth<br><span style="font-size: 0.8rem; color: var(--ink-muted);">Formerly of Architectural Review and Dwell</span></p>
+          <p style="margin-top: 0.75rem;"><strong style="color: var(--ink);">Contributing Editor</strong><br>Daniel Okafor<br><span style="font-size: 0.8rem; color: var(--ink-muted);">Architect and writer, London</span></p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>Write for Us</h4>
+        <div class="about-box">
+          <p>
+            We welcome pitches from architects, designers, and writers. We are particularly interested in articles that combine professional expertise with clear, accessible writing. Send a brief pitch—no more than 200 words—to <a href="mailto:pitch@ardenspaceconcepts.com" style="color: var(--accent);">pitch@ardenspaceconcepts.com</a>.
+          </p>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="newsletter-inner">
+      <h3>The Weekly Briefing</h3>
+      <p>One email each week. New articles, considered reading, and notes from the editorial desk.</p>
+      <form class="newsletter-form" id="newsletterForm" onsubmit="return handleNewsletter(event)">
+        <label for="newsletterEmail" class="sr-only">Email address</label>
+        <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMsg" style="font-size: 0.8rem; margin-top: 0.75rem; color: var(--accent);"></p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Arden <span>Space</span> Concepts</span>
+          <p>An independent editorial publication about architecture and interior design. Long-form writing for people who care about how spaces work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="index.html#architecture">Architecture</a></li>
+            <li><a href="index.html#interiors">Interior Design</a></li>
+            <li><a href="index.html#materials">Materials</a></li>
+            <li><a href="index.html#lighting">Lighting</a></li>
+            <li><a href="index.html#planning">Space Planning</a></li>
+            <li><a href="index.html#modern-homes">Modern Homes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Publication</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Arden Space Concepts. All rights reserved.</p>
+        <p>Independently published. No sponsored content.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== NAV TOGGLE =====
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    
+    // ===== SEARCH (placeholder functionality for about page) =====
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        // On the about page, search would normally redirect to the main page
+        // For now, just a visual placeholder
+        console.log('Search on about page:', e.target.value);
+      });
+    }
+    
+    // ===== CATEGORY FILTER (placeholder for about page) =====
+    const catButtons = document.querySelectorAll('.cat-btn');
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        // On the about page, category filter would redirect to main page
+        // For now, just visual feedback
+      });
+    });
+    
+    // ===== NEWSLETTER =====
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value;
+      const msg = document.getElementById('newsletterMsg');
+      
+      if (email) {
+        msg.textContent = 'Thank you. You will receive a confirmation email shortly.';
+        document.getElementById('newsletterEmail').value = '';
+      }
+      return false;
+    }
+    
+    // ===== SMOOTH SCROLL FOR NAV LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          mainNav.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

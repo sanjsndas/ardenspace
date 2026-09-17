@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arden Space Concepts | Architecture & Interior Design Publication</title>
+  <meta name="description" content="Independent editorial publication exploring residential architecture, interior design, materials, lighting, and the principles that shape meaningful spaces.">
+  <meta name="author" content="Arden Space Concepts">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Arden Space Concepts | Architecture & Interior Design Publication">
+  <meta property="og:description" content="Long-form articles on residential architecture, interior design, materials, and space planning.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ardenspaceconcepts.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+  
+  <link rel="canonical" href="https://ardenspaceconcepts.com/">
+  
+  <!-- Schema.org Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Arden Space Concepts",
+    "description": "Independent editorial publication covering architecture and interior design.",
+    "url": "https://ardenspaceconcepts.com/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Arden Space Concepts"
+    }
+  }
+  </script>
+  
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #7a7a7a;
+      --paper: #faf9f7;
+      --paper-warm: #f5f3ef;
+      --border: #e2ded8;
+      --border-dark: #c8c2ba;
+      --accent: #8b6f47;
+      --accent-light: #b89b73;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+    }
+    
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.05rem; }
+    
+    .article-body h2 { margin: 2.5rem 0 1rem; }
+    .article-body h3 { margin: 2rem 0 0.75rem; }
+    .article-body p { margin-bottom: 1.25rem; font-size: 1.0625rem; line-height: 1.75; color: var(--ink-light); }
+    .article-body p:first-of-type { font-size: 1.15rem; color: var(--ink); }
+    
+    /* ===== HEADER ===== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    
+    .logo span { color: var(--accent); }
+    
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      transition: color 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active { color: var(--ink); }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.6rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    
+    /* ===== SEARCH BAR ===== */
+    .search-bar {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 1rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+    
+    .search-input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border);
+      background: white;
+      font-size: 0.9rem;
+      font-family: var(--sans);
+      color: var(--ink);
+      transition: border-color 0.2s;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    
+    .search-input::placeholder { color: var(--ink-muted); }
+    
+    /* ===== CATEGORY FILTER ===== */
+    .category-filter {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      overflow-x: auto;
+    }
+    
+    .cat-btn {
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--sans);
+      white-space: nowrap;
+    }
+    
+    .cat-btn:hover, .cat-btn.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(139, 111, 71, 0.05);
+    }
+    
+    /* ===== MAIN LAYOUT ===== */
+    .layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3.5rem;
+    }
+    
+    /* ===== FEATURED ARTICLE ===== */
+    .featured-article {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .featured-article .article-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      margin-bottom: 1.75rem;
+    }
+    
+    .featured-article h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    
+    .featured-article .excerpt {
+      font-size: 1.05rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      flex-wrap: wrap;
+    }
+    
+    .meta .category-tag {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    
+    /* ===== ARTICLE GRID ===== */
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    
+    .article-card {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.75rem;
+    }
+    
+    .article-card .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    
+    .article-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+    
+    .article-card .card-excerpt {
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      line-height: 1.65;
+      margin-bottom: 0.75rem;
+    }
+    
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+    
+    .sidebar-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .sidebar-section:last-child { border-bottom: none; }
+    
+    .sidebar-section h4 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 1.25rem;
+    }
+    
+    .popular-list { list-style: none; }
+    
+    .popular-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .popular-list li:last-child { border-bottom: none; }
+    
+    .popular-list .pop-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      line-height: 1.35;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    .popular-list .pop-meta {
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    
+    .about-box {
+      background: var(--paper-warm);
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+    }
+    
+    .about-box p {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+    }
+    
+    /* ===== NEWSLETTER ===== */
+    .newsletter-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .newsletter-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .newsletter-inner h3 { margin-bottom: 0.5rem; }
+    
+    .newsletter-inner p {
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.7rem 1rem;
+      border: 1px solid var(--border-dark);
+      font-size: 0.9rem;
+      font-family: var(--sans);
+    }
+    
+    .newsletter-form button {
+      padding: 0.7rem 1.25rem;
+      background: var(--ink);
+      color: white;
+      border: none;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.2s;
+    }
+    
+    .newsletter-form button:hover { background: var(--accent); }
+    
+    /* ===== FAQ ===== */
+    .faq-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    
+    .faq-question {
+      width: 100%;
+      padding: 1.1rem 0;
+      background: none;
+      border: none;
+      text-align: left;
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--ink);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .faq-question:hover { color: var(--accent); }
+    
+    .faq-question .icon { font-size: 1.2rem; transition: transform 0.2s; }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    .faq-answer.open { max-height: 400px; }
+    
+    .faq-answer p {
+      padding: 0 0 1.25rem;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+    }
+    
+    /* ===== ABOUT / CONTACT / LEGAL ===== */
+    .static-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    
+    .static-section h2 { margin-bottom: 1rem; }
+    
+    .static-section p {
+      max-width: 720px;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--ink-light);
+      margin-bottom: 1rem;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    
+    .contact-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .contact-item strong {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      margin-bottom: 0.25rem;
+    }
+    
+    .contact-item span { font-size: 0.95rem; color: var(--ink); }
+    
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--ink);
+      color: var(--paper);
+      margin-top: 2rem;
+    }
+    
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .footer-brand .logo { color: white; margin-bottom: 0.75rem; display: block; }
+    
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    
+    .footer-col ul { list-style: none; }
+    
+    .footer-col li { margin-bottom: 0.5rem; }
+    
+    .footer-col a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    
+    .footer-col a:hover { color: white; }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      
+      .sidebar { position: static; }
+      
+      .article-grid { grid-template-columns: 1fr; }
+      
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    
+    @media (max-width: 640px) {
+      html { font-size: 15px; }
+      
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      .featured-article h2 { font-size: 1.5rem; }
+      
+      .header-inner { flex-wrap: wrap; }
+      
+      .nav-toggle { display: block; }
+      
+      .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+      
+      .main-nav.open { display: flex; }
+      
+      .featured-article .article-img { height: 220px; }
+      
+      .article-card .card-img { height: 160px; }
+      
+      .newsletter-form { flex-direction: column; }
+      
+      .contact-grid { grid-template-columns: 1fr; }
+      
+      .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    .hidden { display: none !important; }
+    
+    /* ===== SEARCH RESULTS ===== */
+    .search-results-info {
+      padding: 1rem 0;
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">Arden <span>Space</span> Concepts</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav aria-label="Main navigation">
+        <ul class="main-nav" id="mainNav">
+            <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== SEARCH ===== -->
+  <div class="search-bar">
+    <label for="searchInput" class="sr-only">Search articles</label>
+    <input type="text" id="searchInput" class="search-input" placeholder="Search articles by title, topic, or keyword…">
+  </div>
+
+  <!-- ===== CATEGORY FILTER ===== -->
+  <div class="category-filter" id="categoryFilter">
+    <button class="cat-btn active" data-category="all">All</button>
+    <button class="cat-btn" data-category="Architecture">Architecture</button>
+    <button class="cat-btn" data-category="Interior Design">Interior Design</button>
+    <button class="cat-btn" data-category="Home Design">Home Design</button>
+    <button class="cat-btn" data-category="Materials">Materials</button>
+    <button class="cat-btn" data-category="Space Planning">Space Planning</button>
+    <button class="cat-btn" data-category="Lighting">Lighting</button>
+    <button class="cat-btn" data-category="Furniture">Furniture</button>
+    <button class="cat-btn" data-category="Modern Homes">Modern Homes</button>
+  </div>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <main class="layout" id="mainContent">
+
+    <!-- LEFT COLUMN: ARTICLES -->
+    <div class="content-column">
+
+      <div id="searchResultsInfo" class="search-results-info hidden"></div>
+
+      <!-- FEATURED ARTICLE -->
+      <article class="featured-article" data-category="Architecture" data-title="The Quiet Power of Restraint in Residential Architecture" id="architecture">
+        <img src="https://images.unsplash.com/photo-1551038247-3d9af20df552?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+             alt="Modern residential home with clean lines, large windows, and minimalist landscaping at dusk" 
+             class="article-img"
+             loading="eager">
+        <div class="meta">
+          <span class="category-tag">Architecture</span>
+          <span>March 12, 2026</span>
+          <span>14 min read</span>
+        </div>
+        <h2><a href="#architecture">The Quiet Power of Restraint in Residential Architecture</a></h2>
+        <p class="excerpt">
+          In an era of visual noise, the most compelling homes are those that exercise discipline. This examination of contemporary residential work explores how the omission of the unnecessary—rather than the addition of the impressive—creates architecture that endures. Drawing on projects across Scandinavia, Japan, and the American Southwest, we consider proportion, material honesty, and the deliberate use of negative space.
+        </p>
+        <p class="excerpt" style="font-size: 0.95rem;">
+          <!-- ARTICLE CONTENT PLACEHOLDER: ~3,500 words on restraint, proportion, and material honesty in residential work -->
+          [Full article content would continue here covering: the philosophical roots of architectural restraint, case studies of homes that prioritize spatial clarity, the role of proportion in creating calm, and practical lessons for homeowners and designers.]
+        </p>
+      </article>
+
+      <!-- ARTICLE GRID -->
+      <div class="article-grid" id="articleGrid">
+
+        <article class="article-card" data-category="Interior Design" data-title="Designing Rooms That Breathe: The Principles of Negative Space">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" 
+               alt="Minimalist living room with white walls, a single armchair, and abundant natural light" 
+               class="card-img"
+               loading="lazy">
+          <div class="meta">
+            <span class="category-tag">Interior Design</span>
+            <span>11 min read</span>
+          </div>
+          <h3><a href="#interiors">Designing Rooms That Breathe: The Principles of Negative Space</a></h3>
+          <p class="card-excerpt">
+            Negative space is not emptiness—it is the medium through which form becomes legible. This guide examines how interior designers use void, pause, and visual rest to create rooms that feel expansive and intentional rather than merely furnished.
+          </p>
+          <!-- ~2,800 words placeholder -->
+        </article>
+
+        <article class="article-card" data-category="Materials" data-title="The Honest Surface: A Guide to Natural Stone in Contemporary Interiors">
+          <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?w=600&q=80" 
+               alt="Close-up of marble surface with grey veining in a modern kitchen setting" 
+               class="card-img"
+               loading="lazy">
+          <div class="meta">
+            <span class="category-tag">Materials</span>
+            <span>13 min read</span>
+          </div>
+          <h3><a href="#materials">The Honest Surface: A Guide to Natural Stone in Contemporary Interiors</a></h3>
+          <p class="card-excerpt">
+            Marble, travertine, limestone, and granite each carry distinct visual and tactile identities. This practical guide covers selection criteria, finishes, maintenance realities, and how stone ages gracefully in both high-traffic and intimate domestic settings.
+          </p>
+          <!-- ~3,200 words placeholder -->
+        </article>
+
+        <article class="article-card" data-category="Lighting" data-title="Layered Light: A Room-by-Room Approach to Residential Illumination">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80" 
+               alt="Warm interior lighting with floor lamp and pendant fixtures in a living space" 
+               class="card-img"
+               loading="lazy">
+          <div class="meta">
+            <span class="category-tag">Lighting</span>
+            <span>12 min read</span>
+          </div>
+          <h3><a href="#lighting">Layered Light: A Room-by-Room Approach to Residential Illumination</a></h3>
+          <p class="card-excerpt">
+            Good lighting is not about brightness—it is about layering. Ambient, task, and accent light serve different purposes, and their careful combination transforms how a room feels at different hours. A practical framework for every room in the home.
+          </p>
+          <!-- ~3,000 words placeholder -->
+        </article>
+
+        <article class="article-card" data-category="Space Planning" data-title="The Geometry of Living: How Floor Plans Shape Daily Experience">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" 
+               alt="Architectural floor plan drawing with scale ruler and pencil on a desk" 
+               class="card-img"
+               loading="lazy">
+          <div class="meta">
+            <span class="category-tag">Space Planning</span>
+            <span>15 min read</span>
+          </div>
+          <h3><a href="#planning">The Geometry of Living: How Floor Plans Shape Daily Experience</a></h3>
+          <p class="card-excerpt">
+            A floor plan is not a neutral diagram—it is a prediction of how life will unfold. Circulation, sightlines, adjacencies, and the relationship between public and private zones determine whether a home supports or frustrates its occupants. A deep dive into the logic of residential planning.
+          </p>
+          <!-- ~3,800 words placeholder -->
+        </article>
+
+        <article class="article-card" data-category="Modern Homes" data-title="The Courtyard House: Ancient Strategy, Contemporary Relevance">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" 
+               alt="Modern courtyard house with glass walls surrounding a central garden" 
+               class="card-img"
+               loading="lazy">
+          <div class="meta">
+            <span class="category-tag">Modern Homes</span>
+            <span>14 min read</span>
+          </div>
+          <h3><a href="#modern-homes">The Courtyard House: Ancient Strategy, Contemporary Relevance</a></h3>
+          <p class="card-excerpt">
+            From Pompeii to Kyoto to Palm Springs, the courtyard has served as a device for privacy, climate control, and psychological refuge. This exploration considers why the typology remains vital for contemporary residential design in an era of density and environmental uncertainty.
+          </p>
+          <!-- ~3,400 words placeholder -->
+        </article>
+
+        <article class="article-card" data-category="Home Design" data-title="Small Spaces, Large Ideas: The Design Logic of Compact Living">
+          <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80" 
+               alt="Compact apartment interior with clever storage and multifunctional furniture" 
+               class="card-img"
+               loading="lazy">
+          <div class="meta">
+            <span class="category-tag">Home Design</span>
+            <span>10 min read</span>
+          </div>
+          <h3><a href="#home-design">Small Spaces, Large Ideas: The Design Logic of Compact Living</a></h3>
+          <p class="card-excerpt">
+            Designing small is not about sacrifice—it is about precision. This guide examines the strategies that make compact homes feel generous: vertical thinking, dual-purpose furniture, visual continuity, and the disciplined editing of possessions.
+          </p>
+          <!-- ~2,600 words placeholder -->
+        </article>
+
+      </div>
+
+      <!-- ===== ARTICLE READING SECTIONS (Long-form content sections) ===== -->
+      
+      <section id="interiors" class="article-body" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+        <h2>Interior Design: The Discipline of Making Rooms That Work</h2>
+        <!-- ARTICLE CONTENT PLACEHOLDER: ~8,000 words on interior design principles, color theory, furniture arrangement, textiles, and room-specific guidance -->
+        <p>[This section would contain the full long-form editorial content on interior design principles, including: the psychology of color in domestic settings, the ergonomics of furniture arrangement, the role of texture in creating warmth, and case studies of rooms that succeed because of disciplined decision-making rather than budget or scale.]</p>
+      </section>
+
+      <section id="materials" class="article-body" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+        <h2>Materials: The Physical Language of Architecture</h2>
+        <!-- ARTICLE CONTENT PLACEHOLDER: ~7,000 words on wood, stone, concrete, glass, metal, and their applications -->
+        <p>[This section would contain the full long-form editorial content on materials, covering: the selection criteria for natural and engineered materials, the aesthetics of aging, sustainability considerations, and the ways that material choice communicates intent—from the warmth of timber to the rigor of concrete.]</p>
+      </section>
+
+      <section id="lighting" class="article-body" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+        <h2>Lighting: The Invisible Architecture</h2>
+        <!-- ARTICLE CONTENT PLACEHOLDER: ~6,000 words on residential lighting design -->
+        <p>[This section would contain the full long-form editorial content on lighting, including: the physics of light and perception, fixture selection, the relationship between daylight and artificial light, and practical guidance for achieving warmth, clarity, and atmosphere in each room.]</p>
+      </section>
+
+      <section id="planning" class="article-body" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+        <h2>Space Planning: The Foundation of Good Architecture</h2>
+        <!-- ARTICLE CONTENT PLACEHOLDER: ~7,000 words on floor plans, circulation, adjacencies -->
+        <p>[This section would contain the full long-form editorial content on space planning, covering: the principles of residential circulation, the relationship between public and private zones, the logic of kitchen and bathroom placement, and how to evaluate a floor plan before committing to construction or renovation.]</p>
+      </section>
+
+      <section id="modern-homes" class="article-body" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+        <h2>Modern Homes: What Contemporary Residential Design Gets Right—and Wrong</h2>
+        <!-- ARTICLE CONTENT PLACEHOLDER: ~6,000 words on contemporary residential architecture -->
+        <p>[This section would contain the full long-form editorial content on modern residential design, examining: the legacy of modernist principles, the tension between openness and privacy, the environmental performance of contemporary homes, and the question of whether "modern" still means what it once did.]</p>
+      </section>
+
+      <section id="home-design" class="article-body" style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--border);">
+        <h2>Home Design: Practical Guides for Real Spaces</h2>
+        <!-- ARTICLE CONTENT PLACEHOLDER: ~5,000 words of practical room-by-room guidance -->
+        <p>[This section would contain practical, actionable guidance on: kitchen design and workflow, bathroom planning and fixtures, bedroom environments for rest, living room arrangements, and the specific challenges of renovation in existing structures.]</p>
+      </section>
+
+    </div>
+
+    <!-- RIGHT COLUMN: SIDEBAR -->
+    <aside class="sidebar" aria-label="Sidebar">
+
+      <div class="sidebar-section">
+        <h4>Popular Articles</h4>
+        <ul class="popular-list">
+          <li>
+            <a href="#planning" class="pop-title">The Geometry of Living: How Floor Plans Shape Daily Experience</a>
+            <span class="pop-meta">Space Planning · 15 min</span>
+          </li>
+          <li>
+            <a href="#materials" class="pop-title">The Honest Surface: A Guide to Natural Stone</a>
+            <span class="pop-meta">Materials · 13 min</span>
+          </li>
+          <li>
+            <a href="#architecture" class="pop-title">The Quiet Power of Restraint in Residential Architecture</a>
+            <span class="pop-meta">Architecture · 14 min</span>
+          </li>
+          <li>
+            <a href="#lighting" class="pop-title">Layered Light: A Room-by-Room Approach to Illumination</a>
+            <span class="pop-meta">Lighting · 12 min</span>
+          </li>
+          <li>
+            <a href="#modern-homes" class="pop-title">The Courtyard House: Ancient Strategy, Contemporary Relevance</a>
+            <span class="pop-meta">Modern Homes · 14 min</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>About This Publication</h4>
+        <div class="about-box">
+          <p>
+            Arden Space Concepts is an independent editorial publication devoted to the serious consideration of architecture and interior design. We publish long-form articles that examine the principles, materials, and decisions that shape the built environment. No sponsored content. No listicles. Just considered writing for people who care about how spaces work.
+          </p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>Editorial Team</h4>
+        <div style="font-size: 0.88rem; color: var(--ink-light); line-height: 1.7;">
+          <p><strong style="color: var(--ink);">Editor</strong><br>Margaret Ellsworth<br><span style="font-size: 0.8rem; color: var(--ink-muted);">Formerly of Architectural Review and Dwell</span></p>
+          <p style="margin-top: 0.75rem;"><strong style="color: var(--ink);">Contributing Editor</strong><br>Daniel Okafor<br><span style="font-size: 0.8rem; color: var(--ink-muted);">Architect and writer, London</span></p>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="newsletter-inner">
+      <h3>The Weekly Briefing</h3>
+      <p>One email each week. New articles, considered reading, and notes from the editorial desk.</p>
+      <form class="newsletter-form" id="newsletterForm" onsubmit="return handleNewsletter(event)">
+        <label for="newsletterEmail" class="sr-only">Email address</label>
+        <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="newsletterMsg" style="font-size: 0.8rem; margin-top: 0.75rem; color: var(--accent);"></p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What is the editorial focus of Arden Space Concepts?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>We publish long-form articles about architecture and interior design, with a particular emphasis on residential work. Our focus is on principles, materials, and practical knowledge rather than trends, product promotion, or portfolio showcases. We believe that thoughtful writing about the built environment can help both professionals and homeowners make better decisions.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Do you accept sponsored content or advertising?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>No. Arden Space Concepts is independently funded and does not accept sponsored articles, native advertising, or paid placements. All editorial content is written by our team and contributing editors without commercial influence. We may occasionally link to books or resources we genuinely recommend, but these are not affiliate arrangements.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Who writes the articles?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Our editorial team includes architects, interior designers, and experienced design journalists. We also commission articles from practitioners who can write with authority about their areas of expertise. Every article is reviewed for factual accuracy and clarity before publication.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Can I republish or quote from your articles?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Brief quotations with attribution and a link to the original article are permitted. For republication of full articles, please contact our editorial team. We are generally open to syndication arrangements with like-minded publications.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How often do you publish new articles?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>We publish two to three substantial articles each week, with occasional longer features and special series. Quality and depth take precedence over frequency—we would rather publish one carefully considered article than five superficial ones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="static-section" id="about">
+    <h2>About Arden Space Concepts</h2>
+    <p>
+      Arden Space Concepts began as a personal archive of architectural notes and grew into an independent publication with a simple conviction: that serious writing about buildings and interiors has value. We are not a design firm, an agency, or a marketplace. We are a publication.
+    </p>
+    <p>
+      Our editorial approach is grounded in the belief that architecture and interior design are disciplines—not merely aesthetic preferences. We write about proportion, material behavior, spatial logic, and the accumulated wisdom of practitioners. We are interested in why spaces work, not just how they look.
+    </p>
+    <p>
+      The publication is edited by Margaret Ellsworth, a former editor at Architectural Review and Dwell, with contributions from architects, designers, and writers across Europe and North America. Our articles are researched, fact-checked, and written to be useful for years rather than weeks.
+    </p>
+    <p>
+      We have no commercial relationships with manufacturers, developers, or design firms. Our only obligation is to our readers.
+    </p>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="static-section" id="contact">
+    <h2>Contact</h2>
+    <p>We welcome correspondence from readers, contributors, and publishers. We read every message, though we cannot always respond individually.</p>
+    
+    <div class="contact-grid">
+      <div class="contact-item">
+        <strong>Editorial Inquiries</strong>
+        <span>editorial@ardenspaceconcepts.com</span>
+      </div>
+      <div class="contact-item">
+        <strong>Pitch & Submissions</strong>
+        <span>pitch@ardenspaceconcepts.com</span>
+      </div>
+      <div class="contact-item">
+        <strong>General Correspondence</strong>
+        <span>hello@ardenspaceconcepts.com</span>
+      </div>
+      <div class="contact-item">
+        <strong>Mailing Address</strong>
+        <span>Arden Space Concepts<br>PO Box 4402<br>Portland, OR 97208</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIVACY ===== -->
+  <section class="static-section" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>
+      Arden Space Concepts collects minimal data. We do not track individual readers across the web, we do not sell or share personal information, and we do not use invasive analytics. 
+    </p>
+    <p>
+      If you subscribe to our newsletter, your email address is stored with our email service provider solely for the purpose of sending you the newsletter. You can unsubscribe at any time using the link at the bottom of every email.
+    </p>
+    <p>
+      Our website does not use cookies for advertising or tracking purposes. Any cookies used are strictly functional (for example, remembering that you dismissed a notification). We do not use third-party advertising networks.
+    </p>
+    <p>
+      If you contact us by email, your message and contact details are retained only as long as necessary to respond and maintain our correspondence records.
+    </p>
+    <p><em>Last updated: January 2026</em></p>
+  </section>
+
+  <!-- ===== TERMS ===== -->
+  <section class="static-section" id="terms">
+    <h2>Terms of Use</h2>
+    <p>
+      All content published on Arden Space Concepts is protected by copyright. You may read, share links, and quote brief passages with attribution. You may not reproduce full articles, scrape content, or use our material for commercial purposes without written permission.
+    </p>
+    <p>
+      The information published on this site is provided for general educational and informational purposes. While we strive for accuracy, architectural and design decisions should be made in consultation with qualified professionals who can assess your specific circumstances. Arden Space Concepts disclaims liability for any actions taken based on information published here.
+    </p>
+    <p>
+      External links are provided for reference. We are not responsible for the content, privacy practices, or accuracy of external sites.
+    </p>
+    <p>
+      By using this website, you agree to these terms. If you do not agree, please do not use the site.
+    </p>
+    <p><em>Last updated: January 2026</em></p>
+  </section>
+
+  <!-- ===== COOKIES ===== -->
+  <section class="static-section" id="cookies">
+    <h2>Cookie Policy</h2>
+    <p>
+      Arden Space Concepts uses only functional cookies necessary for the website to operate correctly. These may include cookies that remember your preferences (such as whether you have dismissed an informational banner) or that support basic website functionality.
+    </p>
+    <p>
+      We do not use cookies for advertising, tracking, or analytics that identify individual users. We do not share cookie data with third parties.
+    </p>
+    <p>
+      Most web browsers allow you to control cookies through their settings. Disabling cookies may affect the functionality of this and other websites.
+    </p>
+    <p><em>Last updated: January 2026</em></p>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Arden <span>Space</span> Concepts</span>
+          <p>An independent editorial publication about architecture and interior design. Long-form writing for people who care about how spaces work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#interiors">Interior Design</a></li>
+            <li><a href="#materials">Materials</a></li>
+            <li><a href="#lighting">Lighting</a></li>
+            <li><a href="#planning">Space Planning</a></li>
+            <li><a href="#modern-homes">Modern Homes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Publication</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#newsletter">Newsletter</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Use</a></li>
+            <li><a href="#cookies">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Arden Space Concepts. All rights reserved.</p>
+        <p>Independently published. No sponsored content.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== NAV TOGGLE =====
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    
+    // ===== CATEGORY FILTER =====
+    const catButtons = document.querySelectorAll('.cat-btn');
+    const featuredArticle = document.querySelector('.featured-article');
+    const articleCards = document.querySelectorAll('.article-card');
+    const searchInput = document.getElementById('searchInput');
+    const searchResultsInfo = document.getElementById('searchResultsInfo');
+    
+    let activeCategory = 'all';
+    let searchQuery = '';
+    
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.category;
+        filterArticles();
+      });
+    });
+    
+    // ===== SEARCH =====
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      filterArticles();
+    });
+    
+    function filterArticles() {
+      let visibleCount = 0;
+      const totalArticles = articleCards.length + 1; // +1 for featured
+      
+      // Filter featured
+      const featuredCat = featuredArticle.dataset.category || '';
+      const featuredTitle = (featuredArticle.dataset.title || '').toLowerCase();
+      const featuredText = featuredArticle.textContent.toLowerCase();
+      
+      const featuredMatchCat = activeCategory === 'all' || featuredCat === activeCategory;
+      const featuredMatchSearch = !searchQuery || 
+        featuredTitle.includes(searchQuery) || 
+        featuredText.includes(searchQuery);
+      
+      if (featuredMatchCat && featuredMatchSearch) {
+        featuredArticle.classList.remove('hidden');
+        visibleCount++;
+      } else {
+        featuredArticle.classList.add('hidden');
+      }
+      
+      // Filter cards
+      articleCards.forEach(card => {
+        const cat = card.dataset.category || '';
+        const title = (card.dataset.title || '').toLowerCase();
+        const text = card.textContent.toLowerCase();
+        
+        const matchCat = activeCategory === 'all' || cat === activeCategory;
+        const matchSearch = !searchQuery || 
+          title.includes(searchQuery) || 
+          text.includes(searchQuery);
+        
+        if (matchCat && matchSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+      
+      // Show/hide results info
+      if (searchQuery || activeCategory !== 'all') {
+        searchResultsInfo.classList.remove('hidden');
+        let info = '';
+        if (searchQuery) info += `Results for "${searchInput.value}"`;
+        if (activeCategory !== 'all') info += (info ? ' · ' : '') + `Category: ${activeCategory}`;
+        info += ` · ${visibleCount} article${visibleCount !== 1 ? 's' : ''} found`;
+        searchResultsInfo.textContent = info;
+        
+        if (visibleCount === 0) {
+          searchResultsInfo.textContent += ' — No articles match your criteria.';
+        }
+      } else {
+        searchResultsInfo.classList.add('hidden');
+      }
+    }
+    
+    // ===== FAQ TOGGLE =====
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.icon');
+      const isOpen = answer.classList.contains('open');
+      
+      // Close all others
+      document.querySelectorAll('.faq-answer.open').forEach(a => {
+        a.classList.remove('open');
+        a.previousElementSibling.querySelector('.icon').textContent = '+';
+      });
+      
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.textContent = '−';
+      }
+    }
+    
+    // ===== NEWSLETTER =====
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail').value;
+      const msg = document.getElementById('newsletterMsg');
+      
+      if (email) {
+        msg.textContent = 'Thank you. You will receive a confirmation email shortly.';
+        document.getElementById('newsletterEmail').value = '';
+      }
+      return false;
+    }
+    
+    // ===== SMOOTH SCROLL FOR NAV LINKS =====
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Close mobile nav
+          mainNav.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

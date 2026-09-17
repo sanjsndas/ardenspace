@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories | Arden Space Concepts</title>
+  <meta name="description" content="Browse all categories from Arden Space Concepts: Architecture, Interior Design, Materials, Lighting, Space Planning, Modern Homes, and more.">
+  <meta name="author" content="Arden Space Concepts">
+  <link rel="canonical" href="https://ardenspaceconcepts.com/categories.html">
+  
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #7a7a7a;
+      --paper: #faf9f7;
+      --paper-warm: #f5f3ef;
+      --border: #e2ded8;
+      --border-dark: #c8c2ba;
+      --accent: #8b6f47;
+      --accent-light: #b89b73;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+    }
+    
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.05rem; }
+    
+    /* ===== HEADER (same as main) ===== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    
+    .logo span { color: var(--accent); }
+    
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      transition: color 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active { color: var(--ink); }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.6rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    
+    /* ===== CATEGORIES HERO ===== */
+    .categories-hero {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .categories-hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+    
+    .categories-hero p {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+    
+    /* ===== CATEGORY GRID ===== */
+    .categories-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    
+    .category-card {
+      background: white;
+      border: 1px solid var(--border);
+      padding: 2rem 1.75rem;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .category-card:hover {
+      border-color: var(--accent-light);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      transform: translateY(-2px);
+    }
+    
+    .category-card .cat-icon {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      font-family: var(--serif);
+    }
+    
+    .category-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+    
+    .category-card p {
+      font-size: 0.92rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    
+    .category-card .cat-count {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+    }
+    
+    .category-card .cat-link {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.75rem;
+    }
+    
+    .category-card .cat-link::after {
+      content: "→";
+      transition: transform 0.2s;
+    }
+    
+    .category-card:hover .cat-link::after {
+      transform: translateX(4px);
+    }
+    
+    /* ===== RECENTLY PUBLISHED (across categories) ===== */
+    .recent-section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+    
+    .recent-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .recent-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    
+    .recent-item {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1.25rem;
+    }
+    
+    .recent-item .recent-cat {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    
+    .recent-item h4 {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+    
+    .recent-item .recent-meta {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    
+    /* ===== FOOTER (same as main) ===== */
+    .site-footer {
+      background: var(--ink);
+      color: var(--paper);
+      margin-top: 2rem;
+    }
+    
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .footer-brand .logo { color: white; margin-bottom: 0.75rem; display: block; }
+    
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 0.5rem; }
+    
+    .footer-col a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    
+    .footer-col a:hover { color: white; }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .categories-grid { grid-template-columns: repeat(2, 1fr); }
+      .recent-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    
+    @media (max-width: 640px) {
+      html { font-size: 15px; }
+      h1 { font-size: 1.8rem; }
+      .categories-hero h1 { font-size: 2rem; }
+      .categories-grid { grid-template-columns: 1fr; }
+      .recent-grid { grid-template-columns: 1fr; }
+      
+      .header-inner { flex-wrap: wrap; }
+      .nav-toggle { display: block; }
+      
+      .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+      
+      .main-nav.open { display: flex; }
+      
+      .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Arden <span>Space</span> Concepts</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav aria-label="Main navigation">
+        <ul class="main-nav" id="mainNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html" class="active">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="categories-hero">
+    <h1>Browse by Category</h1>
+    <p>Every article in our archive, organised by subject. Each category contains long-form editorial writing—no listicles, no sponsored content, just considered coverage of the built environment.</p>
+  </section>
+
+  <!-- ===== CATEGORY GRID ===== -->
+  <div class="categories-grid">
+
+    <article class="category-card">
+      <div class="cat-icon">⌂</div>
+      <h3>Architecture</h3>
+      <p>Residential architecture as a discipline: proportion, structure, site response, and the philosophical underpinnings of built form. Case studies and critical analysis from around the world.</p>
+      <span class="cat-count">8 articles</span>
+      <a href="index.html#architecture" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">◻</div>
+      <h3>Interior Design</h3>
+      <p>The arrangement of rooms, colour, texture, and light. How interior decisions shape the experience of daily life—and why some spaces feel effortless while others never quite work.</p>
+      <span class="cat-count">12 articles</span>
+      <a href="index.html#interiors" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">◈</div>
+      <h3>Materials</h3>
+      <p>Wood, stone, concrete, glass, metal, and the finishes that define them. Selection criteria, aging behaviour, sustainability, and the way material choice communicates intent.</p>
+      <span class="cat-count">9 articles</span>
+      <a href="index.html#materials" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">☀</div>
+      <h3>Lighting</h3>
+      <p>Daylight and artificial illumination as architectural tools. Layering, fixture selection, colour temperature, and the invisible decisions that make a room feel warm or clinical.</p>
+      <span class="cat-count">7 articles</span>
+      <a href="index.html#lighting" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">▦</div>
+      <h3>Space Planning</h3>
+      <p>Floor plans, circulation, adjacencies, and the relationship between public and private zones. How the geometry of a home predicts—and shapes—the life lived inside it.</p>
+      <span class="cat-count">10 articles</span>
+      <a href="index.html#planning" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">⌘</div>
+      <h3>Modern Homes</h3>
+      <p>Contemporary residential design examined critically: the legacy of modernism, the tension between openness and privacy, environmental performance, and the meaning of "modern" today.</p>
+      <span class="cat-count">6 articles</span>
+      <a href="index.html#modern-homes" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">▣</div>
+      <h3>Home Design</h3>
+      <p>Practical, room-by-room guidance for real spaces. Kitchens, bathrooms, bedrooms, living areas, and the specific challenges of renovating within existing structures.</p>
+      <span class="cat-count">14 articles</span>
+      <a href="index.html#home-design" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">◧</div>
+      <h3>Furniture</h3>
+      <p>Furniture as spatial infrastructure: ergonomics, proportion, material honesty, and the difference between pieces that merely fill a room and those that complete it.</p>
+      <span class="cat-count">5 articles</span>
+      <a href="#" class="cat-link">View articles</a>
+    </article>
+
+    <article class="category-card">
+      <div class="cat-icon">◇</div>
+      <h3>Editorial & Essays</h3>
+      <p>Longer-form reflections on the state of architecture and design culture. Criticism, opinion, and the occasional provocation—written for readers who care about how spaces work.</p>
+      <span class="cat-count">4 articles</span>
+      <a href="#" class="cat-link">View articles</a>
+    </article>
+
+  </div>
+
+  <!-- ===== RECENTLY PUBLISHED ===== -->
+  <section class="recent-section">
+    <h2>Recently Published</h2>
+    <div class="recent-grid">
+
+      <article class="recent-item">
+        <span class="recent-cat">Architecture</span>
+        <h4><a href="index.html#architecture">The Quiet Power of Restraint in Residential Architecture</a></h4>
+        <span class="recent-meta">March 12, 2026 · 14 min read</span>
+      </article>
+
+      <article class="recent-item">
+        <span class="recent-cat">Interior Design</span>
+        <h4><a href="index.html#interiors">Designing Rooms That Breathe: The Principles of Negative Space</a></h4>
+        <span class="recent-meta">March 10, 2026 · 11 min read</span>
+      </article>
+
+      <article class="recent-item">
+        <span class="recent-cat">Materials</span>
+        <h4><a href="index.html#materials">The Honest Surface: A Guide to Natural Stone</a></h4>
+        <span class="recent-meta">March 8, 2026 · 13 min read</span>
+      </article>
+
+      <article class="recent-item">
+        <span class="recent-cat">Lighting</span>
+        <h4><a href="index.html#lighting">Layered Light: A Room-by-Room Approach to Illumination</a></h4>
+        <span class="recent-meta">March 6, 2026 · 12 min read</span>
+      </article>
+
+      <article class="recent-item">
+        <span class="recent-cat">Space Planning</span>
+        <h4><a href="index.html#planning">The Geometry of Living: How Floor Plans Shape Daily Experience</a></h4>
+        <span class="recent-meta">March 4, 2026 · 15 min read</span>
+      </article>
+
+      <article class="recent-item">
+        <span class="recent-cat">Modern Homes</span>
+        <h4><a href="index.html#modern-homes">The Courtyard House: Ancient Strategy, Contemporary Relevance</a></h4>
+        <span class="recent-meta">March 1, 2026 · 14 min read</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Arden <span>Space</span> Concepts</span>
+          <p>An independent editorial publication about architecture and interior design. Long-form writing for people who care about how spaces work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="categories.html">All Categories</a></li>
+            <li><a href="index.html#architecture">Architecture</a></li>
+            <li><a href="index.html#interiors">Interior Design</a></li>
+            <li><a href="index.html#materials">Materials</a></li>
+            <li><a href="index.html#lighting">Lighting</a></li>
+            <li><a href="index.html#planning">Space Planning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Publication</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#newsletter">Newsletter</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Arden Space Concepts. All rights reserved.</p>
+        <p>Independently published. No sponsored content.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== NAV TOGGLE =====
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+
+    // ===== SMOOTH SCROLL FOR INTERNAL LINKS =====
+    document.querySelectorAll('a[href*="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href.startsWith('index.html#')) {
+          // Let browser navigate to index.html with hash
+          return;
+        }
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          mainNav.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

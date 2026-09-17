@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Arden Space Concepts</title>
+  <meta name="description" content="Privacy Policy for Arden Space Concepts — how we collect, use, and protect your information.">
+  <meta name="author" content="Arden Space Concepts">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy | Arden Space Concepts">
+  <meta property="og:description" content="How Arden Space Concepts collects, uses, and protects your personal information.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ardenspaceconcepts.com/privacy.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+  
+  <link rel="canonical" href="https://ardenspaceconcepts.com/privacy.html">
+  
+  <!-- Schema.org PrivacyPolicy -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "description": "Privacy Policy for Arden Space Concepts.",
+    "url": "https://ardenspaceconcepts.com/privacy.html"
+  }
+  </script>
+  
+  <style>
+    /* ===== RESET & BASE (consistent with main site) ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #7a7a7a;
+      --paper: #faf9f7;
+      --paper-warm: #f5f3ef;
+      --border: #e2ded8;
+      --border-dark: #c8c2ba;
+      --accent: #8b6f47;
+      --accent-light: #b89b73;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+    }
+    
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.6rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.2rem; margin-top: 1.8rem; margin-bottom: 0.75rem; }
+    h4 { font-size: 1.05rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    h5 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    
+    p { margin-bottom: 1.25rem; color: var(--ink-light); }
+    p:last-child { margin-bottom: 0; }
+    
+    ul, ol { margin-bottom: 1.25rem; padding-left: 1.5rem; color: var(--ink-light); }
+    li { margin-bottom: 0.4rem; }
+    
+    strong { color: var(--ink); font-weight: 600; }
+    
+    /* ===== HEADER (same as index) ===== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    
+    .logo span { color: var(--accent); }
+    
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      transition: color 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active { color: var(--ink); }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.6rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    
+    /* ===== MAIN CONTENT ===== */
+    .privacy-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+    
+    .privacy-header {
+      max-width: var(--article-width);
+      margin-bottom: 2.5rem;
+    }
+    
+    .privacy-header h1 {
+      margin-bottom: 0.75rem;
+    }
+    
+    .privacy-header .meta {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+    }
+    
+    .privacy-body {
+      max-width: var(--article-width);
+    }
+    
+    .privacy-body h2 {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .privacy-body h2:first-of-type {
+      margin-top: 0;
+    }
+    
+    .privacy-note {
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      font-size: 0.92rem;
+    }
+    
+    .privacy-note p {
+      margin-bottom: 0.5rem;
+    }
+    
+    .privacy-note p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .privacy-body a {
+      border-bottom: 1px solid var(--border-dark);
+      transition: border-color 0.2s;
+    }
+    
+    .privacy-body a:hover {
+      border-bottom-color: var(--accent);
+    }
+    
+    /* ===== TABLE (for data categories) ===== */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .data-table th {
+      text-align: left;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      padding: 0.75rem 1rem 0.75rem 0;
+      border-bottom: 1px solid var(--border-dark);
+      font-weight: 600;
+    }
+    
+    .data-table td {
+      padding: 0.9rem 1rem 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--ink-light);
+    }
+    
+    .data-table td:first-child {
+      color: var(--ink);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 640px) {
+      html { font-size: 15px; }
+      
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.35rem; }
+      
+      .header-inner { flex-wrap: wrap; }
+      
+      .nav-toggle { display: block; }
+      
+      .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+      
+      .main-nav.open { display: flex; }
+      
+      .privacy-container {
+        padding: 2rem 1.5rem 3rem;
+      }
+      
+      .data-table td:first-child {
+        white-space: normal;
+      }
+    }
+    
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Arden <span>Space</span> Concepts</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav aria-label="Main navigation">
+        <ul class="main-nav" id="mainNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html" class="active">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== PRIVACY CONTENT ===== -->
+  <main class="privacy-container">
+    
+    <div class="privacy-header">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Last updated: March 15, 2026</p>
+    </div>
+    
+    <div class="privacy-body">
+      
+      <p>Arden Space Concepts ("we," "us," or "our") operates the website at <a href="https://ardenspaceconcepts.com">ardenspaceconcepts.com</a> (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit the Site. Please read it carefully. By using the Site, you consent to the practices described here.</p>
+      
+      <div class="privacy-note">
+        <p><strong>In short:</strong> We are an independent editorial publication. We collect only the information necessary to operate the Site, respond to your messages, and understand what our readers find useful. We do not sell your personal information. Ever.</p>
+      </div>
+      
+      <h2>1. Information We Collect</h2>
+      
+      <p>We collect information in two ways: information you provide directly, and information collected automatically as you browse.</p>
+      
+      <h3>1.1 Information You Provide</h3>
+      
+      <p>When you contact us through our <a href="contact.html">contact form</a>, subscribe to our newsletter, or correspond with us by email, you may provide:</p>
+      
+      <ul>
+        <li><strong>Contact details</strong> — your name and email address.</li>
+        <li><strong>Message content</strong> — the subject and body of your inquiry, pitch, or comment.</li>
+        <li><strong>Optional information</strong> — any additional details you choose to share, such as your publication or organization.</li>
+      </ul>
+      
+      <p>We do not require you to create an account to read our articles. There is no login, no paywall, and no membership.</p>
+      
+      <h3>1.2 Information Collected Automatically</h3>
+      
+      <p>Like most websites, we automatically collect certain technical information when you visit:</p>
+      
+      <ul>
+        <li><strong>Device and browser data</strong> — browser type and version, operating system, device type, and screen size.</li>
+        <li><strong>Usage data</strong> — pages visited, time spent on pages, referring URLs, and general interaction patterns.</li>
+        <li><strong>Network data</strong> — IP address (which may indicate your approximate geographic region) and internet service provider.</li>
+        <li><strong>Cookie data</strong> — small text files stored on your device. See our <a href="cookies.html">Cookie Policy</a> for full details.</li>
+      </ul>
+      
+      <h2>2. How We Use Your Information</h2>
+      
+      <p>We use the information we collect for the following purposes:</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Responding to you</td>
+            <td>To answer your inquiries, acknowledge pitches, and follow up on correspondence you initiate.</td>
+          </tr>
+          <tr>
+            <td>Operating the Site</td>
+            <td>To maintain, secure, and improve the Site's functionality and performance.</td>
+          </tr>
+          <tr>
+            <td>Understanding readers</td>
+            <td>To analyze which articles and topics are most useful, so we can plan future editorial coverage.</td>
+          </tr>
+          <tr>
+            <td>Newsletter delivery</td>
+            <td>If you subscribe, to send you our newsletter. You can unsubscribe at any time using the link in every email.</td>
+          </tr>
+          <tr>
+            <td>Legal compliance</td>
+            <td>To comply with applicable laws, respond to lawful requests, and protect our rights.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h2>3. Legal Bases for Processing</h2>
+      
+      <p>If you are located in the European Economic Area (EEA), the United Kingdom, or Switzerland, we process your personal data under the following legal bases:</p>
+      
+      <ul>
+        <li><strong>Consent</strong> — for newsletter subscriptions and non-essential cookies. You may withdraw consent at any time.</li>
+        <li><strong>Legitimate interests</strong> — for responding to your messages, securing the Site, and understanding aggregate readership trends. We balance these interests against your rights.</li>
+        <li><strong>Legal obligation</strong> — where we are required to process data to comply with the law.</li>
+      </ul>
+      
+      <h2>4. Cookies and Tracking</h2>
+      
+      <p>We use cookies and similar technologies for essential Site functionality and for analytics. Our analytics are configured to respect privacy — we do not track you across other websites, and we do not build advertising profiles.</p>
+      
+      <p>You can control cookies through your browser settings. Disabling cookies may affect some Site features. For a full breakdown of the cookies we use and how to manage them, please see our <a href="cookies.html">Cookie Policy</a>.</p>
+      
+      <h2>5. How We Share Information</h2>
+      
+      <p>We do not sell, rent, or trade your personal information. We share information only in these limited circumstances:</p>
+      
+      <ul>
+        <li><strong>Service providers</strong> — trusted third parties who help us operate the Site, such as our email delivery provider and analytics service. These providers are contractually bound to use your data only for the services they perform for us.</li>
+        <li><strong>Legal requirements</strong> — if required by law, subpoena, or other legal process, or if we believe disclosure is necessary to protect our rights, your safety, or the safety of others.</li>
+        <li><strong>Business transfers</strong> — if Arden Space Concepts is ever acquired or merged, your information may be transferred as part of that transaction. We will notify you via a prominent notice on the Site before your data is transferred and becomes subject to a different privacy policy.</li>
+      </ul>
+      
+      <h2>6. Data Retention</h2>
+      
+      <p>We keep your information only as long as necessary for the purposes described in this policy:</p>
+      
+      <ul>
+        <li><strong>Contact form submissions and emails</strong> — retained for up to 24 months so we can reference past correspondence, then deleted.</li>
+        <li><strong>Newsletter subscriptions</strong> — retained until you unsubscribe, plus a short period afterward to honor your opt-out.</li>
+        <li><strong>Analytics data</strong> — retained in aggregate, anonymized form indefinitely; raw data is deleted after 14 months.</li>
+      </ul>
+      
+      <h2>7. Your Rights</h2>
+      
+      <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+      
+      <ul>
+        <li><strong>Access</strong> — request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction</strong> — request that we correct inaccurate or incomplete data.</li>
+        <li><strong>Deletion</strong> — request that we delete your personal data, subject to certain legal exceptions.</li>
+        <li><strong>Restriction</strong> — request that we limit how we process your data.</li>
+        <li><strong>Portability</strong> — request a machine-readable copy of the data you provided to us.</li>
+        <li><strong>Objection</strong> — object to processing based on legitimate interests.</li>
+        <li><strong>Withdraw consent</strong> — where processing is based on consent, withdraw it at any time.</li>
+      </ul>
+      
+      <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@ardenspaceconcepts.com">privacy@ardenspaceconcepts.com</a>. We will respond within 30 days. You also have the right to lodge a complaint with your local data protection authority.</p>
+      
+      <p><strong>California residents:</strong> Under the CCPA/CPRA, you have the right to know what personal information we collect, to request its deletion, to opt out of the "sale" or "sharing" of personal information (we do not sell or share your data as defined by the CPRA), and to not be discriminated against for exercising your rights.</p>
+      
+      <h2>8. Data Security</h2>
+      
+      <p>We take reasonable technical and organizational measures to protect your information, including encrypted connections (HTTPS), access controls, and limiting data collection to what is necessary. However, no method of transmission over the internet is completely secure. We cannot guarantee absolute security, but we work to protect your data and will notify you promptly if a breach affecting your rights occurs.</p>
+      
+      <h2>9. International Transfers</h2>
+      
+      <p>Our Site is operated from the United States. If you access the Site from outside the U.S., your information may be transferred to and processed in the U.S., where data protection laws may differ from those in your jurisdiction. Where required, we rely on appropriate safeguards such as standard contractual clauses for such transfers.</p>
+      
+      <h2>10. Children's Privacy</h2>
+      
+      <p>The Site is intended for a general audience and is not directed to children under 13 (or under 16 in the EEA). We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will delete it promptly.</p>
+      
+      <h2>11. Third-Party Links</h2>
+      
+      <p>Our articles may contain links to external websites, including sources, references, and resources we find valuable. We are not responsible for the privacy practices of those sites. We encourage you to review the privacy policy of any site you visit through a link from ours.</p>
+      
+      <h2>12. Changes to This Policy</h2>
+      
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or the law. When we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, provide a more prominent notice on the Site. We encourage you to review this page periodically.</p>
+      
+      <h2>13. Contact Us</h2>
+      
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal information, please contact us:</p>
+      
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:privacy@ardenspaceconcepts.com">privacy@ardenspaceconcepts.com</a></li>
+        <li><strong>General correspondence:</strong> <a href="mailto:hello@ardenspaceconcepts.com">hello@ardenspaceconcepts.com</a></li>
+        <li><strong>Mail:</strong> Arden Space Concepts, PO Box 4402, Portland, OR 97208</li>
+      </ul>
+      
+      <p style="margin-top: 2.5rem; font-size: 0.9rem; color: var(--ink-muted);">This Privacy Policy is provided for transparency and is not legal advice. If you have specific legal concerns about your data, please consult a qualified attorney in your jurisdiction.</p>
+      
+    </div>
+    
+  </main>
+
+  <!-- ===== FOOTER (consistent with main site) ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Arden <span>Space</span> Concepts</span>
+          <p>An independent editorial publication about architecture and interior design. Long-form writing for people who care about how spaces work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="index.html#architecture">Architecture</a></li>
+            <li><a href="index.html#interiors">Interior Design</a></li>
+            <li><a href="index.html#materials">Materials</a></li>
+            <li><a href="index.html#lighting">Lighting</a></li>
+            <li><a href="index.html#planning">Space Planning</a></li>
+            <li><a href="index.html#modern-homes">Modern Homes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Publication</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#newsletter">Newsletter</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Arden Space Concepts. All rights reserved.</p>
+        <p>Independently published. No sponsored content.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== NAV TOGGLE =====
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+    
+    // ===== SMOOTH SCROLL FOR IN-PAGE ANCHORS =====
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          mainNav.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

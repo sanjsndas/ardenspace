@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Arden Space Concepts</title>
+  <meta name="description" content="About Arden Space Concepts. An independent editorial publication about architecture and interior design, written for people who care about how spaces work.">
+  <meta name="author" content="Arden Space Concepts">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="About | Arden Space Concepts">
+  <meta property="og:description" content="An independent editorial publication about architecture and interior design, written for people who care about how spaces work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ardenspaceconcepts.com/about.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80">
+  
+  <link rel="canonical" href="https://ardenspaceconcepts.com/about.html">
+  
+  <!-- Schema.org AboutPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About | Arden Space Concepts",
+    "description": "An independent editorial publication about architecture and interior design, written for people who care about how spaces work.",
+    "url": "https://ardenspaceconcepts.com/about.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Arden Space Concepts"
+    }
+  }
+  </script>
+  
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --ink: #1a1a1a;
+      --ink-light: #4a4a4a;
+      --ink-muted: #7a7a7a;
+      --paper: #faf9f7;
+      --paper-warm: #f5f3ef;
+      --border: #e2ded8;
+      --border-dark: #c8c2ba;
+      --accent: #8b6f47;
+      --accent-light: #b89b73;
+      --serif: 'Georgia', 'Times New Roman', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --max-width: 1200px;
+      --article-width: 720px;
+    }
+    
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    
+    img { max-width: 100%; height: auto; display: block; }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.25;
+      color: var(--ink);
+    }
+    
+    h1 { font-size: 2.4rem; letter-spacing: -0.02em; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.05rem; }
+    
+    .article-body h2 { margin: 2.5rem 0 1rem; }
+    .article-body h3 { margin: 2rem 0 0.75rem; }
+    .article-body p { margin-bottom: 1.25rem; font-size: 1.0625rem; line-height: 1.75; color: var(--ink-light); }
+    .article-body p:first-of-type { font-size: 1.15rem; color: var(--ink); }
+    
+    /* ===== HEADER ===== */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    
+    .logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    
+    .logo span { color: var(--accent); }
+    
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    
+    .main-nav a {
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      transition: color 0.2s;
+    }
+    
+    .main-nav a:hover, .main-nav a.active { color: var(--ink); }
+    
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.6rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    
+    /* ===== MAIN LAYOUT ===== */
+    .page-layout {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: block;
+    }
+    
+    /* ===== ABOUT PAGE ===== */
+    .about-page {
+      max-width: var(--article-width);
+      margin: 0 auto;
+    }
+    
+    .about-page h1 {
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+    }
+    
+    .about-page .page-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .about-page h2 {
+      margin: 2.5rem 0 0.75rem;
+      font-size: 1.5rem;
+    }
+    
+    .about-page h3 {
+      margin: 2rem 0 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .about-page p {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--ink-light);
+      margin-bottom: 1.25rem;
+    }
+    
+    .about-page ul {
+      margin: 0 0 1.5rem 1.5rem;
+      padding: 0;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: var(--ink-light);
+    }
+    
+    .about-page li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .about-page .highlight-box {
+      background: var(--paper-warm);
+      padding: 1.5rem 2rem;
+      border-left: 4px solid var(--accent);
+      margin: 2rem 0;
+    }
+    
+    .about-page .highlight-box p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .about-page .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .about-page blockquote {
+      border-left: 3px solid var(--accent-light);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--ink);
+      font-style: italic;
+    }
+    
+    .about-page blockquote p {
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    
+    .about-page blockquote cite {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-style: normal;
+      color: var(--ink-muted);
+      margin-top: 0.5rem;
+    }
+    
+    .about-page .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .about-page .team-member {
+      background: var(--paper-warm);
+      padding: 1.5rem;
+    }
+    
+    .about-page .team-member h4 {
+      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+    }
+    
+    .about-page .team-member .role {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    
+    .about-page .team-member p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+    }
+    
+    .last-updated {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      font-style: italic;
+    }
+    
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--ink);
+      color: var(--paper);
+      margin-top: 2rem;
+    }
+    
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .footer-brand .logo { color: white; margin-bottom: 0.75rem; display: block; }
+    
+    .footer-brand p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 1rem;
+    }
+    
+    .footer-col ul { list-style: none; }
+    
+    .footer-col li { margin-bottom: 0.5rem; }
+    
+    .footer-col a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      transition: color 0.2s;
+    }
+    
+    .footer-col a:hover { color: white; }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    
+    @media (max-width: 640px) {
+      html { font-size: 15px; }
+      
+      h1 { font-size: 1.8rem; }
+      .about-page h1 { font-size: 1.8rem; }
+      .about-page h2 { font-size: 1.3rem; }
+      
+      .header-inner { flex-wrap: wrap; }
+      
+      .nav-toggle { display: block; }
+      
+      .main-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--border);
+      }
+      
+      .main-nav.open { display: flex; }
+      
+      .about-page .team-grid { grid-template-columns: 1fr; }
+      
+      .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+    
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Arden <span>Space</span> Concepts</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+      <nav aria-label="Main navigation">
+        <ul class="main-nav" id="mainNav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="page-layout">
+    <div class="about-page">
+
+      <h1>About Arden Space Concepts</h1>
+      <div class="page-meta">Independent editorial publication · Est. 2019</div>
+
+      <p>
+        Arden Space Concepts is an independent publication about architecture and interior design. We write long-form, considered articles for people who care about how spaces work—not just how they look.
+      </p>
+
+      <div class="highlight-box">
+        <p><strong>What we are:</strong> An independent editorial resource. We are not an architecture firm, a design studio, or a marketplace. We do not sell products or services. We publish writing.</p>
+      </div>
+
+      <h2>Our Purpose</h2>
+      <p>
+        Good design is rarely about decoration. It is about light, proportion, materials, and the way a room makes you feel when you walk into it. Our purpose is to explore these ideas in plain language, without jargon and without the breathless tone that dominates so much design media.
+      </p>
+      <p>
+        We write for homeowners, students, and professionals who want to understand the thinking behind a space—why a window was placed where it was, why a particular material was chosen, how a floor plan shapes the way a family lives.
+      </p>
+
+      <h2>What We Write About</h2>
+      <p>
+        Our articles fall into six broad categories:
+      </p>
+      <ul>
+        <li><strong>Architecture</strong> — Residential and public buildings, with a focus on how design decisions affect daily life.</li>
+        <li><strong>Interior Design</strong> — The arrangement of rooms, furniture, and objects, and the principles that make interiors work.</li>
+        <li><strong>Materials</strong> — Wood, stone, concrete, glass, and textiles: how they age, how they feel, and when to use them.</li>
+        <li><strong>Lighting</strong> — Natural and artificial light, and its role in shaping atmosphere and function.</li>
+        <li><strong>Space Planning</strong> — Floor plans, circulation, storage, and the practical geometry of living.</li>
+        <li><strong>Modern Homes</strong> — Contemporary residential projects, reviewed with a critical eye.</li>
+      </ul>
+
+      <h2>Editorial Independence</h2>
+      <p>
+        Arden Space Concepts is independently published and reader-supported. We do not accept sponsored content, paid placements, or affiliate commissions. When we mention a product, material, or practitioner, it is because we believe it is relevant to the article—not because we were paid to include it.
+      </p>
+      <p>
+        Our editorial team operates separately from any commercial interests. If we ever change this model, we will disclose it clearly and prominently.
+      </p>
+
+      <blockquote>
+        <p>“The best rooms are not the ones that photograph well. They are the ones that feel inevitable—as if they could not have been arranged any other way.”</p>
+        <cite>— From our editorial guidelines</cite>
+      </blockquote>
+
+      <h2>How We Work</h2>
+      <p>
+        Every article we publish goes through a simple but rigorous process:
+      </p>
+      <ul>
+        <li><strong>Research.</strong> We read plans, talk to practitioners, and visit buildings wherever possible.</li>
+        <li><strong>Writing.</strong> We write in clear, plain English. We avoid marketing language and unnecessary technical terms.</li>
+        <li><strong>Editing.</strong> Every piece is reviewed by at least one other editor for accuracy, clarity, and tone.</li>
+        <li><strong>Correction.</strong> If we get something wrong, we correct it publicly and promptly.</li>
+      </ul>
+
+      <h2>Who We Are</h2>
+      <p>
+        Arden Space Concepts is run by a small editorial team with backgrounds in architecture, writing, and publishing. We are based in Portland, Oregon.
+      </p>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <h4>Mira Halvorsen</h4>
+          <div class="role">Editor</div>
+          <p>Mira has written about architecture and design for over a decade. She studied architecture at the University of Oregon and worked in residential practice before moving into publishing.</p>
+        </div>
+        <div class="team-member">
+          <h4>Jonas Reed</h4>
+          <div class="role">Senior Writer</div>
+          <p>Jonas covers materials, lighting, and construction. He spent eight years as a builder and project manager before joining Arden Space Concepts.</p>
+        </div>
+      </div>
+
+      <h2>Our Values</h2>
+      <p>
+        We believe that writing about design should be:
+      </p>
+      <ul>
+        <li><strong>Clear.</strong> If a sentence needs to be read twice, we rewrite it.</li>
+        <li><strong>Honest.</strong> We praise what works and say so when something does not.</li>
+        <li><strong>Useful.</strong> Every article should leave the reader with something they can apply or think about.</li>
+        <li><strong>Independent.</strong> Our only obligation is to our readers.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>
+        We welcome questions, corrections, and story ideas. You can reach us through our <a href="contact.html">contact page</a> or by email at <strong>hello@ardenspaceconcepts.com</strong>.
+      </p>
+
+      <div class="last-updated">
+        Page last reviewed: January 2026
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Arden <span>Space</span> Concepts</span>
+          <p>An independent editorial publication about architecture and interior design. Long-form writing for people who care about how spaces work.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="index.html#architecture">Architecture</a></li>
+            <li><a href="index.html#interiors">Interior Design</a></li>
+            <li><a href="index.html#materials">Materials</a></li>
+            <li><a href="index.html#lighting">Lighting</a></li>
+            <li><a href="index.html#planning">Space Planning</a></li>
+            <li><a href="index.html#modern-homes">Modern Homes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Publication</h5>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html#newsletter">Newsletter</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Arden Space Concepts. All rights reserved.</p>
+        <p>Independently published. No sponsored content.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== NAV TOGGLE =====
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
